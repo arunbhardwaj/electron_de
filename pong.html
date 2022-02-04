@@ -1,0 +1,39 @@
+<!-- Pull in P5.JS graphics library -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"
+  integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA=="
+  crossorigin="anonymous"
+></script>
+<script>
+  const screenDimension = 1000;
+  let score = [0, 0];
+  let ball = { x: 250, y: 100, vx: 2, vy: 2 };
+  let player1 = { x: 30, y: 250, height: 100, width: 20 };
+  let player2 = { x: screenDimension - 50, y: 250, height: 100, width: 20 };
+  let colors = {
+    normal: {
+      mouse: 255,
+      background: [255,255,255,0.5]
+    }
+  }
+
+  function invertScreenColor() {
+
+  }
+
+  function setup() {
+    createCanvas(screenDimension, screenDimension);
+    print('hello people')
+  }
+
+  function draw() {
+    background([0,0,0,0.2]);
+    fill(0)
+    ellipse(mouseX, mouseY, 100, 100);
+    if (mouseIsPressed) {
+      ellipse(ball.x, ball.y, 100, 100)
+    } else {
+      fill(255)
+    }
+  }
+</script>
